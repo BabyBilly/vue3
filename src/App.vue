@@ -4,13 +4,20 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
+  <el-button type="primary">Primary</el-button>
   <header>
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
+       <div class="init flex flex-justify-center ">xxx</div>
 
       <nav>
+        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/about">About</RouterLink>
+      </nav>
+      <nav>
+        <div class="init active">xxx</div>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
@@ -20,12 +27,27 @@ import HelloWorld from './components/HelloWorld.vue'
   <RouterView />
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+
 header {
   line-height: 1.5;
   max-height: 100vh;
 }
 
+
+.active{
+  background-color:yellow;
+  color: red;
+  position: relative;
+  font-size: 31px;
+
+}
+heaer nav .init{
+  color: red;
+}
+.flex{
+  display: flex;
+}
 .logo {
   display: block;
   margin: 0 auto 2rem;
